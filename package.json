@@ -1,7 +1,7 @@
 {
   "name": "developer-profile-generator",
   "version": "1.0.0",
-  "description": "Generate PDF  profile based on Github username",
+  "description": "Generate PDF profile based on Github username",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
