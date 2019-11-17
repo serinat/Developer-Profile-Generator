@@ -186,14 +186,12 @@ module.exports.generateHTML = function generateHTML(data) {
             <li class="nav-link"><i class="fa fa-rss"><a href="${data.blog}"></a>Blog</i></li>
         </ul>
 
-    </div>
-
     <main>
         <div class="container">
             <div class="row">
                 <h3 class="col">${data.bio}</h3>
             </div>
-            <div class="row"></div>
+            <div class="row">
             <div class="col">
                 <div class="card">
                     <h3>Public Repositories</h3>
@@ -202,6 +200,7 @@ module.exports.generateHTML = function generateHTML(data) {
                 <div class="card">
                     <h3>Followers</h3>
                     <h4>${data.followers}</h4>
+                </div>
                 </div>
                 <div class="col">
                     <div class="card">
@@ -218,5 +217,5 @@ module.exports.generateHTML = function generateHTML(data) {
         </main>
        </div> 
     </body>
-</html>  
+</html>'  
 };  
