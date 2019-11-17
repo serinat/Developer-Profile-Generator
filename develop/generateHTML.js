@@ -1,40 +1,41 @@
 const colors = {
     green: {
-      wrapperBackground: "#E6E1C3",
-      headerBackground: "#C1C72C",
-      headerColor: "black",
-      photoBorderColor: "#black"
+        wrapperBackground: "#E6E1C3",
+        headerBackground: "#C1C72C",
+        headerColor: "black",
+        photoBorderColor: "#black"
     },
     blue: {
-      wrapperBackground: "#5F64D3",
-      headerBackground: "#26175A",
-      headerColor: "white",
-      photoBorderColor: "#73448C"
+        wrapperBackground: "#5F64D3",
+        headerBackground: "#26175A",
+        headerColor: "white",
+        photoBorderColor: "#73448C"
     },
     pink: {
-      wrapperBackground: "#879CDF",
-      headerBackground: "#FF8374",
-      headerColor: "white",
-      photoBorderColor: "#FEE24C"
+        wrapperBackground: "#879CDF",
+        headerBackground: "#FF8374",
+        headerColor: "white",
+        photoBorderColor: "#FEE24C"
     },
     red: {
-      wrapperBackground: "#DE9967",
-      headerBackground: "#870603",
-      headerColor: "white",
-      photoBorderColor: "white"
+        wrapperBackground: "#DE9967",
+        headerBackground: "#870603",
+        headerColor: "white",
+        photoBorderColor: "white"
     }
-  };
-  
-  module.exports.generateHTML = function generateHTML(data) {
-    return `<!DOCTYPE html>
-  <html lang="en">
-     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
-        <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
-        <title>Document</title>
+};
+
+module.exports.generateHTML = function generateHTML(data) {
+    return `
+    <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+                <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
+        <title>${data.name}'s Profile</title>
         <style>
             @page {
               margin: 0;
@@ -170,6 +171,52 @@ const colors = {
               zoom: .75; 
             } 
            }
-        </style>`
-          }
-  
+        </style>
+      </head>
+
+      <body>
+        <div class="wrapper">
+        <img src="${data.profileImg}" alt="Profile Image">
+        <h1>Hi!</h1>
+        <h2>My name is ${data.actualName}!</h2>
+        <h4 class="company">Currently @ ${data.company}</h4>
+        <ul class="nav-links">
+            <li class="nav-link"><i class="fa fa-location-arrow">${data.location}</i></li>
+            <li class="nav-link"><i class="fa fa-github"><a href="${data.github}"></a>GitHub</i></li>
+            <li class="nav-link"><i class="fa fa-rss"><a href="${data.blog}"></a>Blog</i></li>
+        </ul>
+
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <h3 class="col">${data.bio}</h3>
+            </div>
+            <div class="row"></div>
+            <div class="col">
+                <div class="card">
+                    <h3>Public Repositories</h3>
+                    <h4>${data.publicRepos}</h4>
+                </div>
+                <div class="card">
+                    <h3>Followers</h3>
+                    <h4>${data.followers}</h4>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <h3>GitHub Stars</h3>
+                        <h4>${data.stars}</h4>
+                    </div>
+                    <div class="card">
+                        <h3>Following</h3>
+                        <h4>${data.following}</h4>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+       </div> 
+    </body>
+</html>  
+};  
