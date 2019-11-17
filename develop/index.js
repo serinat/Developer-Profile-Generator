@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
 const pdf = require("html-pdf")
-const generateHTML = require("./generateHTML.js").generateHTML;
+const generateHTML = require("./develop/generateHTML.js").generateHTML;
 
 function promptUser() {
     inquirer.prompt([
