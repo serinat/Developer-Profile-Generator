@@ -181,9 +181,9 @@ module.exports.generateHTML = function generateHTML(data) {
                   <h2>My name is ${data.actualName}!</h2>
                   <h4 style="text-align: center">Currently @ ${data.company}</h4>
                   <ul class="links-nav">
-                      <li class="nav-link"><i class="fa fa-location-arrow"> ${data.location}</i></li>
-                      <li class="nav-link"><a href="${data.github}"><i class="fa fa-github"> GitHub</i></a></li>
-                      <li class="nav-link"><a href="${data.blog}"><i class="fa fa-rss"> Blog</i></a></li>
+                      <li class="nav-link"><i class="fas fa-location-arrow"> ${data.location}</i></li>
+                      <li class="nav-link"><a href="${data.github}"><i class="fab fa-github-alt"> GitHub</i></a></li>
+                      <li class="nav-link"><a href="${data.blog}"><i class="fas fa-rss"> Blog</i></a></li>
                   </ul>
               </div>
       
