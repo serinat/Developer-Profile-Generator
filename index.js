@@ -23,7 +23,7 @@ function promptUser() {
             ]
         }]).then(function ({ username, color }) {
             console.log(color)
-            const queryURL = 'https://api.github.com/users/${username}';
+            const queryURL = `https://api.github.com/users/${username}`;
             axios.get(queryURL).then(function (response) {
                 const user = response.data
 
