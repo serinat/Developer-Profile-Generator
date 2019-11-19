@@ -37,7 +37,7 @@ function promptUser() {
                     blog: user.blog,
                     bio: user.bio,
                     publicRepos: user.public_repos,
-                    follower: user.followers,
+                    followers: user.followers,
                     stars: user.public_gists,
                     following: user.following,
                     color: color
